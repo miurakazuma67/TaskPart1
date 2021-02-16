@@ -9,17 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var textField1: UITextField!
-    @IBOutlet weak var textField2: UITextField!
-    @IBOutlet weak var textField3: UITextField!
-    @IBOutlet weak var textField4: UITextField!
-    @IBOutlet weak var textField5: UITextField!
+    @IBOutlet private weak var textField1: UITextField!
+    @IBOutlet private weak var textField2: UITextField!
+    @IBOutlet private weak var textField3: UITextField!
+    @IBOutlet private weak var textField4: UITextField!
+    @IBOutlet private weak var textField5: UITextField!
     
-    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet private weak var totalLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
         totalLabel.text = "0"
     }
     
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         for textField in textFields {
             total += Int(textField.text ?? "") ?? 0
         }
+
         totalLabel.text = String(total)
     }
 }
-
